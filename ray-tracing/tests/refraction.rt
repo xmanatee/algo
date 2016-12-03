@@ -1,0 +1,75 @@
+viewport
+    origin -50 0 0
+    topleft 10 -10 10
+    bottomleft 10 -10 -10
+    topright 10 10 10
+endviewport
+materials
+    entry
+        name RED
+        color 200 10 10
+        reflect 0.1
+        refract 0
+        refractId 1
+    endentry
+    entry
+        name GREEN
+        color 10 200 10
+        reflect 0.1
+        refract 0
+        refractId 1
+    endentry
+    entry
+        name BLUE
+        color 10 10 200
+        reflect 0.1
+        refract 0
+        refractId 1
+    endentry
+    entry
+        name GLASS
+        color 0 0 0
+        reflect 0.1
+        refract 0.8
+        refractId 0.6
+    endentry
+    entry
+        name BLUE_MIRROR
+        color 1 1 5
+        reflect 0.9
+        refract 0.1
+        refractId 1
+    endentry
+endmaterials
+lights
+    reference
+        power 1
+        distance 1
+    endreference
+    point
+        coords 0 0 5
+        power 100000
+    endpoint
+    point
+        coords 23 0 5
+        power 800000
+    endpoint
+endlights
+geometry
+    triangle
+        vertex 120 10 0
+        vertex 120 -4 4
+        vertex 120 -4 -4
+        material BLUE
+    endtriangle
+    sphere
+        coords 0 0 0
+        radius 10
+        material GLASS
+    endsphere
+    plane
+        loc 0 0 20
+        normal 0 0 -1
+        material BLUE_MIRROR
+    endplane
+endgeometry

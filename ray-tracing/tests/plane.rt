@@ -1,0 +1,38 @@
+viewport
+    origin 0 0 0
+    topleft 10 -10 10
+    bottomleft 10 -10 -10
+    topright 10 10 10
+endviewport
+materials
+    entry
+        name RED
+        color 200 0 0
+        reflect 0.1
+        refract 0.1
+        refractId 1
+    endentry
+endmaterials
+lights
+    reference
+        power 1
+        distance 1
+    endreference
+    point
+        coords 20 0 0
+        power 1000000000
+    endpoint
+endlights
+geometry
+    plane
+        loc 60 0 0
+        normal -1 0 0
+        material RED
+    endplane
+
+    plane
+        loc 40 0 0
+        normal -1 0 0
+        material RED
+    endplane
+endgeometry
