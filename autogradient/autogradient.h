@@ -13,7 +13,7 @@ public:
     TAutoGradient(const T &c): val(c), deriv(0) {}
     TAutoGradient(void): val(0), deriv(0) {}
 
-    static TAutoGradient IndependendVariable(const T &x) {
+    static TAutoGradient IndependentVariable(const T &x) {
         return TAutoGradient(x, 1);
     }
 
