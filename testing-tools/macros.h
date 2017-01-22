@@ -2,8 +2,12 @@
 
 #ifdef TESTING
 #include <iostream>
-#define W(x) std::cerr << x << std::endl
+#define WE(x) std::cerr << "DBG:" << x << std::endl
+#define WO(x) std::cout << "DBG:" << x << std::endl
+
 #else
-#define W(x)
+#define WE(x)
+#define WO(x)
+
 #endif
 
